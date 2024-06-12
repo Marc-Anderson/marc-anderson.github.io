@@ -1,0 +1,521 @@
+/* ============================================================
+    table of contents
+============================================================ */
+/* #region || table of contents */
+/* 
+
+
+1. imports
+2. resets
+3. theme
+    3.1 template base theme
+    3.2 project base theme
+    3.3 light mode
+    3.4 dark mode
+4. typography
+    4.1 typography base
+5. utilities
+6. layout
+7. buttons
+8. navigation
+9. animations
+10. media queries
+
+
+
+/* #endregion || table of contents */
+/* ============================================================
+    1. imports
+============================================================ */
+/* #region || imports */
+
+
+/* prefer links in html over imports where possible */
+/* @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"); */
+/* @import url("./normalize.css?v=000"); */
+
+
+
+/* #endregion || imports */
+/* ============================================================
+    2. resets
+============================================================ */
+/* #region || resets */
+
+
+ul[class] {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+ul[class] li {
+    margin: 0;
+    font-size: inherit;
+}
+
+
+ul[class] a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+
+button, input[type=button] {
+    font: inherit;
+    font-size: inherit;
+}
+
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+
+select {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: inherit;
+}
+
+
+input[type=color] {
+    padding: 0;
+    width: 100%;
+    min-height: 2rem;
+    background-color: transparent;
+    height: 3rem;
+}
+
+
+.material-icons {
+    font-size: inherit;
+}
+
+
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+blockquote > p::before {
+    content: '"';
+}
+
+
+blockquote > p::after {
+    content: '"';
+}
+
+
+ 
+/* #endregion || resets */
+/* ============================================================
+    3. theme
+============================================================ */
+/* #region || theme */
+
+
+/* #region || template base theme */
+:root {
+    /* imported color bases */
+    --color-neutral-100: hsl(0, 0%, 90%);
+    --color-neutral-300: hsl(0, 0%, 70%);
+    --color-neutral-500: hsl(0, 0%, 50%);
+    --color-neutral-800: hsl(214, 6%, 24%);
+
+    /* alerts */
+    --color-alert-success-bg: hsl(145, 63%, 49%);
+    --color-alert-success-text: var(--color-neutral-100);
+    --color-alert-warning-bg: hsl(48, 89%, 50%);
+    --color-alert-warning-text: var(--color-neutral-100);
+    --color-alert-danger-bg: hsl(349, 100%, 35%);
+    --color-alert-danger-text: var(--color-neutral-100);
+
+    /* misc */
+    --color-disabled-bg: var(--color-neutral-dark);
+    --color-disabled-text: var(--color-neutral-light);
+
+    /* spacing */
+    --spacing-sm: .4rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+
+    /* border radius */
+    --border-radius-sm: .4rem;
+    --border-radius-md: .7rem;
+    --border-radius-lg: 1rem;
+
+    /* typography */
+    --font-size-4xl: 4rem;
+    --font-size-3xl: 2.8rem;
+    --font-size-2xl: 2rem;
+    --font-size-xl: 1.5rem;
+    --font-size-lg: 1.17rem;
+    --font-size-md: 1rem;
+    --font-size-sm: .83rem;
+    --font-size-xs: .76rem;
+    --font-size-2xs: .67rem;
+
+    --font-family-sans: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    --font-family-serif: 'Georgia', serif;
+    
+    --font-size-base: 16px;
+    --line-height-base: 1.2;
+    --font-size-heading-scaled: clamp(1.5rem, 5vw, 2.5rem);
+}
+/* #endregion || template base theme */
+
+
+/* #region || project base theme */
+:root {
+
+    /* colors and theme */
+    
+    /* html, body background, global light and dark colors */
+    --color-base-light: hsl(36, 26%, 96%);
+    --color-base-dark: hsl(45, 4%, 20%);
+
+    /* first major color visitor sees other than the base(rei light brown) */
+    --color-primary: hsl(42, 28%, 93%);
+    /* modal and hover backgrounds, other light accents for primary(rei white) */
+    --color-primary-acc-light: var(--color-base-light);
+    /* font color for primary or the background color if primary was the font, borders(rei black) */
+    --color-primary-acc-dark: var(--color-base-dark);
+
+    /* second major color visitor sees(rei green) */
+    --color-secondary: hsl(154, 43%, 18%);
+    /* accents secondary color for backgrounds or text, can be the same as base light */
+    --color-secondary-acc-light: var(--color-base-light);
+    /* accents secondary color for backgrounds or text, can be the same as base dark */
+    --color-secondary-acc-dark: var(--color-base-dark);
+
+    /* third major color visitor sees(rei red) */
+    --color-tertiary: hsl(7, 86%, 39%);
+    /* accents tertiary color for backgrounds or text, can be the same as base light */
+    --color-tertiary-acc-light: var(--color-base-light);
+    /* accents tertiary color for backgrounds or text, can be the same as base dark */
+    --color-tertiary-acc-dark: var(--color-base-dark);
+
+
+    /* structure */
+    --site-width: clamp(320px, 100vw, 800px);
+
+
+    /* typography */
+    --site-font-family: var(--font-family-sans);
+    --site-font-size: var(--font-size-base);
+    --site-line-height: var(--line-height-base);
+}
+/* #endregion || project base theme */
+
+
+/* #region || light mode */
+@media (prefers-color-scheme: light ) {
+    :root {
+        /* background color */
+        --site-color-base: var(--color-base-light);
+        /* primary color - header, footer, section backgrounds */
+        --site-color-primary: var(--color-primary);
+        /* primary font colors - global font colors */
+        --site-color-font-primary: var(--color-primary-acc-dark);
+        --site-color-font-headings: var(--color-primary-acc-dark);
+
+        /* accent color 1 - background, border colors for buttons and other elements */
+        --site-color-secondary: var(--color-secondary);
+        /* text colors for buttons with secondary backgrounds */
+        --site-color-secondary-acc: var(--color-base-light);
+
+        /* accent color 2 - background color for some random elements */
+        --site-color-tertiary: var(--color-tertiary);
+        /* text color for those elements */
+        --site-color-tertiary-acc: var(--color-base-light);
+    }
+
+}
+/* #endregion || light mode */
+
+
+/* #region || dark mode */
+@media (prefers-color-scheme: dark ) {
+    :root {
+        /* background color */
+        --site-color-base: var(--color-base-dark);
+        /* primary color - header, footer, section backgrounds */
+        --site-color-primary: var(--color-primary-acc-dark);
+
+        /* primary font colors - global font colors */
+        --site-color-font-primary: var(--color-primary-acc-light);
+        --site-color-font-headings: var(--color-primary-acc-light);
+
+        /* accent color 1 - background, border colors for buttons and other elements */
+        --site-color-secondary: var(--color-secondary);
+        /* text colors for buttons with secondary backgrounds */
+        --site-color-secondary-acc: var(--color-base-light);
+
+        /* accent color 2 - background color for some random elements */
+        --site-color-tertiary: var(--color-tertiary);
+        /* text color for those elements */
+        --site-color-tertiary-acc: var(--color-base-light);
+    }
+}
+/* #endregion || dark mode */
+
+
+
+/* #endregion || theme */
+/* ============================================================
+    4. typography
+============================================================ */
+/* #region || typography */
+
+
+/* #region || typography base */
+.font-size-4xl { font-size: var(--font-size-4xl); }
+.font-size-3xl { font-size: var(--font-size-3xl); }
+.font-size-2xl { font-size: var(--font-size-2xl); }
+.font-size-xl {  font-size: var(--font-size-xl); }
+.font-size-lg {  font-size: var(--font-size-lg); }
+.font-size-md {  font-size: var(--font-size-md); }
+.font-size-sm {  font-size: var(--font-size-sm); }
+.font-size-xs {  font-size: var(--font-size-xs); }
+.font-size-2xs { font-size: var(--font-size-2xs); }
+
+
+h1 { font-size: var(--font-size-3xl); }
+h2 { font-size: var(--font-size-xl); }
+h3 { font-size: var(--font-size-lg); }
+h4 { font-size: var(--font-size-md); }
+h5 { font-size: var(--font-size-sm); }
+h6 { font-size: var(--font-size-2xs); }
+
+
+h1,h2,h3,h4,h5,h6 { color: var(--font-color-headings); }
+
+
+p,
+li {
+    font-size: var(--font-size-md);
+    margin: 0 0 1em;
+}
+/* #endregion || typography base */
+
+
+
+/* #endregion || typography */
+/* ============================================================
+    5. utilities
+============================================================ */
+/* #region || utilities */
+
+
+.hidden {
+    display: none;
+    visibility: none;
+}
+
+.ellipsis {
+    max-width: 97%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+/* #endregion || utilities */
+/* ============================================================
+    6. layout  
+============================================================ */
+/* #region || layout */
+
+
+/* html {} */
+
+
+/* .no-js {} */
+
+
+
+:root {
+    --profile-icon-spacing: .5rem;
+}
+
+
+body {
+    background-color: var(--site-color-base, color-mix(in hsl, canvastext 66%, canvas 100%));
+    color: var(--site-color-font-primary, color-mix(in hsl, canvastext 100%, canvas 44%));
+    font-family: var(--site-font-family);
+    font-size: var(--site-font-size);
+    line-height: var(--site-line-height);
+    min-height: 100vh;
+    overflow: hidden;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+}
+
+
+.title, .subtitle {
+    margin: 0;
+    font-weight: 400;
+}
+
+
+.subtitle {
+    color: var(--site-color-font-primary);
+    /* filter: contrast(.87); */
+}
+
+
+:root {
+    --site-rainbow-rotate: 60deg;
+}
+#rainbow:checked + label > .subtitle, #rainbow:checked + label + nav .link-item:hover i, #rainbow:checked + label + nav .link-item:focus i {
+    background: linear-gradient(var(--site-rainbow-rotate), violet, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* background-position-x: 10vw; */
+    background-size: 240%;
+}
+
+nav {
+    margin-block: var(--profile-icon-spacing);
+}
+
+
+.profile-container {
+    display: flex;
+    border-radius: 1em;
+    
+    gap: var(--profile-icon-spacing);
+    padding: 1em;
+    flex-direction: column;
+
+}
+
+
+.link-box {
+    display: grid;
+    gap: var(--profile-icon-spacing);
+}
+ 
+
+.link-item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1em, 6vw,1.9em);
+    border-radius: .85em;
+    box-shadow: 0px 0px 12px -6px transparent;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+
+.link-item:hover, .link-item:focus {
+    scale: 1.09;
+    box-shadow: 0px 0px 8px -4px var(--site-color-font-primary);
+    background-color: rgba(255,255,255,.1);
+}   
+
+
+.link-item i {
+    font-size: 3rem;
+    color: var(--site-color-font-primary);
+    opacity: .5;
+}
+
+
+
+@media only screen and (min-width: 550px) {
+
+    .profile-container {
+        width: clamp(284px, 550px, 90%);
+        transform: translateY(-30%);
+        background-color: rgba(255,255,255,.2);
+        border: 1px solid rgba(255,255,255,.1);
+    }
+    
+    .link-box {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .link-item {
+        padding: .7em;
+    }
+ 
+}
+
+
+
+/* #endregion || bio */
+/* ============================================================
+    8. navigation
+============================================================ */
+/* #region || navigation */
+
+
+/* navigation component classes */
+
+
+
+/* #endregion || navigation */
+/* ============================================================
+    9. animations
+============================================================ */
+/* #region || animations */
+
+/* 
+@keyframes wobble {
+    0% {
+    }
+    25% {
+    }
+    50% {
+    }
+    100% {
+    }
+}
+ */
+
+
+/* #endregion || animations */
+/* ============================================================
+    10. media queries
+============================================================ */
+/* #region || media queries */
+
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {} */
+
+
+
+/* #endregion || media queries */
