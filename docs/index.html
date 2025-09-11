@@ -1,139 +1,124 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
+<!doctype html>
+<html lang="en">
 
 <head>
-    <!-- google tag manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5QH8NCZ');</script>
-    <!-- end google tag manager -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- top level meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- about -->
+    <title>Marc Anderson | JavaScript & Python Developer</title>
+    <meta name="description" content="Marc Anderson's portfolio showcasing projects in JavaScript, Python, and automation. Explore skills, projects, and connect for collaboration." />
+    <link rel="canonical" href="https://metamarc.com/" />
+
+    <!-- open graph -->
     <meta property="og:locale" content="en_US" />
-
-    <!-- location meta -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://metamarc.com/" />
-    <link rel="canonical" href="http://metamarc.com/" />
-
-    <!-- title meta -->
     <meta property="og:title" content="Marc Anderson" />
+    <meta property="og:description" content="Marc Anderson's profile including projects in JavaScript, Python, and automation." />
+    <meta property="og:url" content="https://metamarc.com/" />
     <meta property="og:site_name" content="Marc Anderson" />
-    <meta property="twitter:title" content="Marc Anderson" />
-
-    <!-- description meta -->
-    <title>Marc Anderson | JavaScript and Python Developer</title>
-    <meta name="description" content="Marc Anderson's portfolio showcasing projects in JavaScript, Python and many others. Explore projects, skills, and connect for collaboration on development, data analysis, and automation." />
-    <meta property="og:description" content="Marc Anderson's portfolio showcasing projects in JavaScript, Python and many others. Explore projects, skills, and connect for collaboration on development, data analysis, and automation." />
-    <meta name="twitter:card" content="Marc Anderson's portfolio showcasing projects in JavaScript, Python and many others. Explore projects, skills, and connect for collaboration on development, data analysis, and automation." />
-    
-    <!-- icon meta -->
-    <link rel="apple-touch-icon" href="./assets/icons/icon.png">
-    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.png">
     <meta property="og:image" content="https://metamarc.com/assets/images/profile_image.jpeg" />
 
-    <!-- data meta -->
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","description":"Marc Anderson's portfolio showcasing projects in JavaScript, Python and many others. Explore projects, skills, and connect for collaboration on development, data analysis, and automation.","headline":"Marc Anderson","name":"Marc Anderson","url":"http://metamarc.com/"}</script>
-    <link type="application/atom+xml" rel="alternate" href="http://metamarc.com/feed.xml" title="Marc Anderson" />
+    <!-- x/twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Marc Anderson" />
+    <meta name="twitter:description" content="Marc Anderson's profile including projects in JavaScript, Python, and automation." />
+    <meta name="twitter:image" content="https://metamarc.com/assets/images/profile_image.jpeg" />
 
-    <!-- meta theme -->
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
-    
+    <!-- icons -->
+    <link rel="apple-touch-icon" href="./assets/icons/icon.png">
+    <link rel="icon" type="image/png" href="./assets/icons/favicon.png">
+
+    <!-- jsonld -->
+    <script type="application/ld+json">{"@context": "https://schema.org","@type": "Person","name": "Marc Anderson","url": "https://metamarc.com","jobTitle": "JavaScript and Python Developer","sameAs": ["https://www.linkedin.com/in/xmarcandersonx/","https://github.com/marc-anderson"]}</script>
+
+    <!-- theme -->
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1a1a1a" />
+
     <!-- styles -->
-    <link rel="stylesheet" href="./assets/css/main.css?v=000">
-    <style id="local-styles"></style>
-
-    <!-- style imports -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"> -->
-
-
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
+
 <body>
-    <!-- google tag manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QH8NCZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- end google tag manager (noscript) -->
+    <main class="site-main">
+        <article class="profile-card" aria-labelledby="profile-title">
+            <header class="profile-header">
+                <h1 id="profile-title" class="profile-title">Marc Anderson</h1>
+                <p class="profile-subtitle">
+                    <span class="badge">
+                        Automation, JavaScript, Python<span class="separator" aria-hidden="true"></span> Developer
+                    </span>
+                </p>
+            </header>
 
+            <nav class="primary-nav" aria-label="Primary">
+                <ul>
+                    <li>
+                        <a class="nav-tile" href="https://www.linkedin.com/in/xmarcandersonx/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-tile" href="https://github.com/Marc-Anderson" target="_blank"
+                            rel="noopener noreferrer" aria-label="GitHub Profile">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-tile"
+                            href="https://drive.google.com/drive/folders/1vmL7MoMLnZ7EIZbLe4zWLYzUds8c_ooi?usp=sharing"
+                            target="_blank" rel="noopener noreferrer" aria-label="View Resume">
+                            <i class="fas fa-file-alt" aria-hidden="true"></i>
+                            <span>Resume</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-tile" href="mailto:xmarcandersonx@gmail.com?subject=Let's%20Talk%20About%20Work"
+                            aria-label="Send an Email">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
+            <section id="projects" class="projects" aria-label="Projects">
+                <details class="accordion">
 
+                    <summary>
+                        <span class="accordion-title">Projects</span>
+                        <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                            aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </summary>
 
+                    <div class="accordion-panel" role="region" aria-label="Project links">
+                        <div class="chips">
+                            <a class="chip" href="https://rates.metamarc.com" target="_blank" rel="noopener noreferrer">Fpv Rate Converter</a>
+                            <a class="chip" href="https://github.com/Marc-Anderson/autohotkey-text-expander" target="_blank" rel="noopener noreferrer">Ahk Text Expander</a>
+                        </div>
+                    </div>
+                </details>
+            </section>
+        </article>
 
-    <!-- #region || profile container -->
-    <main class="profile-container">
-
-
-
-
-        <h1 class="title">Marc Anderson</h1>
-        <input type="checkbox" name="rainbow" name="rainbow-mode" id="rainbow" style="display: none;">
-        <label id="rainbow-label" for="rainbow" tabindex="0">
-            <h2 class="subtitle"><small>Automation, Javascript/Python Developer</small></h2>
-        </label>
-        <!-- #region || site-navigation -->
-        <nav>
-        <ul class="link-box">
-            <li>
-                <a class="link-item" target="_blank" name="Projects" href="https://www.linkedin.com/in/xmarcandersonx/">
-                    <i class="material-icons">person</i>
-                    <span>Profile</span>
-                </a>
-            </li>
-            <li>
-                <a class="link-item" target="_blank" name="Projects" href="https://github.com/Marc-Anderson">
-                    <i class="material-icons">construction</i>
-                    <span>Projects</span>
-                </a>
-            </li>
-            <li>
-                <a class="link-item" target="_blank" name="Resume" href="https://drive.google.com/drive/folders/1vmL7MoMLnZ7EIZbLe4zWLYzUds8c_ooi?usp=sharing">
-                    <i class="material-icons">history</i>
-                    <span>Resume</span>
-                </a>
-            </li>
-            <li>
-                <a class="link-item" target="_blank" name="Contact" href="mailto:xmarcandersonx@gmail.com?subject=Lets%20Talk%20About%20Work">
-                    <i class="material-icons">contact_mail</i>
-                    <span>Contact</span>
-                </a>
-            </li>
-        </ul>
-        </nav>
-        <!-- #endregion || site-navigation -->
-
-
-
-
-
+        <footer class="site-footer">
+            © <span id="copyright-year"></span> Marc Anderson
+        </footer>
     </main>
-    <!-- #endregion || profile container -->
 
-
-
-
-
-    <!-- toggle "no-js"/"js" class on html element so css can be applied accordingly -->
-    <script>document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/,'js');</script>
-
-
-
-
-
-    <script type="module" src="./assets/js/main.js?v=000"></script>
-
-
-
-
-
-    <script id="local-scripts"></script>
-
-
-
-
-
+    <script>
+        // year
+        document.getElementById( 'copyright-year' ).textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>
